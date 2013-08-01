@@ -18,6 +18,24 @@ test('single', function (t) {
     ]);
 });
 
+test('array pairs', function (t) {
+    t.plan(1);
+    var results = [];
+    
+    npair([[1,2,3],[['a','b'],['c','d']]], function (x) {
+        results.push(x);
+    });
+    
+    t.deepEqual(results, [
+        [1,['a','b']],
+        [1,['c','d']],
+        [2,['a','b']],
+        [2,['c','d']],
+        [3,['a','b']],
+        [3,['c','d']]
+    ]);
+});
+
 test('3-way pairs', function (t) {
     t.plan(1);
     
@@ -104,6 +122,6 @@ test('4 elements', function (t) {
         ['b',5,'y',9],
         ['b',5,'z',7],
         ['b',5,'z',8],
-        ['b',5,'z',9],
+        ['b',5,'z',9]
     ]);
 });
