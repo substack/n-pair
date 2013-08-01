@@ -2,6 +2,10 @@
 
 generate pairings for n-many sets
 
+[![testling badge](https://ci.testling.com/substack/n-pair.png)](https://ci.testling.com/substack/n-pair)
+
+[![build status](https://secure.travis-ci.org/substack/n-pair.png)](http://travis-ci.org/substack/n-pair)
+
 # example
 
 ``` js
