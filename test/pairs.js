@@ -1,6 +1,23 @@
 var npair = require('../');
 var test = require('tape');
 
+test('single', function (t) {
+    t.plan(1);
+    var results = [];
+    
+    npair([[1,2,3,4,5]], function (x) {
+        results.push(x);
+    });
+    
+    t.deepEqual(results, [
+        [1],
+        [2],
+        [3],
+        [4],
+        [5]
+    ]);
+});
+
 test('3-way pairs', function (t) {
     t.plan(1);
     
